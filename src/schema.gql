@@ -4,4 +4,6 @@
 
 type Query {
   sayHello: String!
+  menu: [String!]!
+  saludame(nombre: String!): String!
 }
