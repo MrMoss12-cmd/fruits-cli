@@ -6,6 +6,7 @@ import { HelloModule } from './hola/hello.module';
 import { MenuModule } from './menu/menu.module';
 
 
+
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -14,8 +15,10 @@ import { MenuModule } from './menu/menu.module';
       debug: true,
       playground: true,
     }),
+
     HelloModule,
     MenuModule
+
   ],
 })
 export class AppModule {}

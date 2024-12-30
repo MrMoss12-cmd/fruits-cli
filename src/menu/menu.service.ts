@@ -4,7 +4,8 @@ import { Injectable } from "@nestjs/common";
 export class MenuService {
     private services: string[] = [];
 
-    //agrega un servicio al menu 
+
+    //agrega un nuevo servicio al menu
     addService(serviceName: string): void {
         this.services.push(serviceName);
     }
@@ -14,3 +15,4 @@ export class MenuService {
         return this.services;
     }
 }
+
