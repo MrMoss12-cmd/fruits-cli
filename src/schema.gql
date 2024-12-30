@@ -3,5 +3,8 @@
 # ------------------------------------------------------
 
 type Query {
-  sayHello: String!
+  sayHello(name: String!): String!
+
+  """List all available services in the menu"""
+  getMenu: [String!]!
 }
