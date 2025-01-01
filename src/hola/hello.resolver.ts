@@ -10,3 +10,4 @@ export class HelloResolver {
         return this.helloService.sayHello(name);
     }
 }
+
