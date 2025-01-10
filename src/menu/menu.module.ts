@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { MenuService } from './menu.service';
 import { MenuResolver } from './menu.resolver';
+import { MenuService } from './menu.service';
 
 @Module({
     providers: [MenuService, MenuResolver],
-    exports: [MenuService], //Exportamos el servicio para que otros modulos lo puedan usar
+    exports: [MenuService], //exportamos el servicio para que otros modulos lo puedan usar
 })
 
 export class MenuModule {}
+

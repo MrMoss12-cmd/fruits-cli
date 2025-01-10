@@ -2,17 +2,23 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
-import { MenuModule } from './menu/menu.module';
 import { HelloModule } from './hola/hello.module';
+import { MenuModule } from './menu/menu.module';
+
+
 
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      debug: true,
+      playground: true,
     }),
-    MenuModule, //Agregamos modulo menu
+
     HelloModule,
+    MenuModule
+
   ],
 })
 export class AppModule {}
